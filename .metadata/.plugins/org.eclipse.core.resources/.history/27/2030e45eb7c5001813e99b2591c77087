@@ -1,0 +1,22 @@
+package org.IOS.AutomateIOS;
+
+import org.aspectj.lang.annotation.Before;
+import org.openqa.selenium.remote.DesiredCapabilities;
+
+import io.appium.java_client.remote.AutomationName;
+import io.appium.java_client.remote.MobileCapabilityType;
+
+public class Practice {
+
+	
+	public void setUp () {
+	
+	DesiredCapabilities capability = new DesiredCapabilities();
+	capability.setCapability(MobileCapabilityType.DEVICE_NAME, "Iphone 6");
+	capability.setCapability(MobileCapabilityType.PLATFORM_NAME, "IOS");
+	//IOS 10.2 and greater
+	capability.setCapability(MobileCapabilityType.AUTOMATION_NAME, AutomationName.IOS_XCUI_TEST); //XCUI framework
+	capability.setCapability(MobileCapabilityType.APP, "//Users//smoorkothkayath//Desktop//UICatalog.app");
+	
+	}
+}
